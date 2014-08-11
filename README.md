@@ -22,10 +22,13 @@ datameer-gcs-connector
         </servlet-mapping>
 	<!-- KENSHOO oAuth forward -->
 
-6. insert the following into conf/default.properties (this section assumes that you have google app to be used in it)
+6. insert the following into conf/default.properties
+   (this section assumes that you have google app to be used in it)
 
-	oauth.data.google.clientid=...
-	oauth.data.google.secret=...
+	oauth.data.google.clientid=
+
+	oauth.data.google.secret=
+
 	oauth.data.google.redirecturi=http://integration.kenshoo.com:8080/oauth/forward
 
 7. restart Datameer
