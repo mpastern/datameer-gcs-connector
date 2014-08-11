@@ -29,6 +29,6 @@ datameer-gcs-connector
 
 	oauth.data.google.secret=
 
-	oauth.data.google.redirecturi=http://integration.kenshoo.com:8080/oauth/forward
+	oauth.data.google.redirecturi=http://your-url:8080/oauth/forward
 
 7. restart Datameer
