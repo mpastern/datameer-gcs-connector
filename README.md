@@ -11,6 +11,8 @@ datameer-gcs-connector
 
 5. inset the following deployment descriptor into webapp/ROOT/WEB-INF/web.xml:
 
+## web.xml
+
 	<!-- KENSHOO oAuth forward -->
 	<servlet>
                 <servlet-name>oauthforward</servlet-name>
@@ -25,10 +27,10 @@ datameer-gcs-connector
 6. insert the following into conf/default.properties
    (this section assumes that you have google app to be used in it)
 
+## default.properties
+
 	oauth.data.google.clientid=
-
 	oauth.data.google.secret=
-
 	oauth.data.google.redirecturi=http://your-url:8080/oauth/forward
 
 7. restart Datameer
