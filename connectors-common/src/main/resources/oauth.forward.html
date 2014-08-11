@@ -1,0 +1,29 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <title>OAuth forward page</title>
+    <script type="text/javascript">
+        function forwardRequest() {
+            var state = getParameterByName("state");
+            var textElement = document.getElementById("text");
+            if(null !== state && undefined !== state) {
+                var thisUrl = location.href;
+                var queryString = thisUrl.substring(thisUrl.indexOf("?") + 1);
+                state = decodeURIComponent(state);
+                location.href = state + (state.indexOf('?') !== -1 ? "&" : "?") + queryString;
+            } else {
+                textElement.innerHTML = "Invalid Request: " + location.href+"!";
+            }
+        }
+
+        function getParameterByName(name) {
+            var match = RegExp("[?&]" + name + "=([^&]*)").exec(window.location.search);
+            return match && decodeURIComponent(match[1].replace(/\+/g, " "));
+        }
+    </script>
+  </head>
+  <body onload="forwardRequest()">
+     <div id="text"></div>
+  </body>
+</html>

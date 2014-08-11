@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin
+   id="gcs"
+   name="GCS Plugin"
+   version="1.0"
+   provider-name="Kenshoo">
+
+   <requires>
+      <!-- List all plug-ins here that this plug-in depends on. You can write extensions 
+           for all extensions points of the dependent plug-ins and classes and jar files 
+           of these plug-ins will be added to the class path of this plug-in. -->
+      <import plugin="das.sdk"/>
+   </requires>
+</plugin>
