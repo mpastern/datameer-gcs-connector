@@ -1,15 +1,15 @@
 datameer-gcs-connector
 ======================
 
-1. compile the project
+- compile the project
 
-2. copy gcs-1.0.zip to etc/custom-plugins
+- copy gcs-1.0.zip to etc/custom-plugins
 
-3. copy gcs-1.0-fat.jar to etc/custom-jars
+- copy gcs-1.0-fat.jar to etc/custom-jars
 
-4. copy kenshoo_servlet_connectors-common-1.0.jar to webapp/ROOT/WEB-INF/lib
+- copy kenshoo_servlet_connectors-common-1.0.jar to webapp/ROOT/WEB-INF/lib
 
-5. inset the following deployment descriptor into webapp/ROOT/WEB-INF/web.xml:
+- inset the following deployment descriptor into webapp/ROOT/WEB-INF/web.xml:
 
 ## web.xml
 
@@ -24,7 +24,7 @@ datameer-gcs-connector
         </servlet-mapping>
 	<!-- KENSHOO oAuth forward -->
 
-6. insert the following into conf/default.properties
+- insert the following into conf/default.properties
    (this section assumes that you have google app to be used in it)
 
 ## default.properties
@@ -33,4 +33,4 @@ datameer-gcs-connector
 	oauth.data.google.secret=
 	oauth.data.google.redirecturi=http://your-url:8080/oauth/forward
 
-7. restart Datameer
+- restart Datameer
